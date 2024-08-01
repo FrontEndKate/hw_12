@@ -13,7 +13,7 @@ function getElementById(id) {
 
 function addPerson() {
     let name = getElementById('name').value;
-    let age = parseInt(getElementById('age').value, 10);
+    let age = parseInt(getElementById('age').value);
     if(age<0 || age>130 || isNaN(age)){
         alert('Please enter a valid age from 0 to 130');
         return;
@@ -23,7 +23,7 @@ function addPerson() {
         updatePersonsList();
         clearInputFields();
     } else {
-        alert('Please enter a valid, unique name and age.');
+        alert('Please enter a valid, unique name');
     }
 }
 
